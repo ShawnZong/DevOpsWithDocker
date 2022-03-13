@@ -1,0 +1,31 @@
+Script started on 2022-03-13 18:06:29+0100
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker pull nginx[?1l>[?2004l
+]2;sudo docker pull nginx]1;docker[sudo] password for tanj: 
+Using default tag: latest
+latest: Pulling from library/nginx
+Digest: sha256:1c13bc6de5dfca749c377974146ac05256791ca2fe1979fc8e8278bf0121d285
+Status: Image is up to date for nginx:latest
+docker.io/library/nginx:latest
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker run -d nginx[?1l>[?2004l
+]2;sudo docker run -d nginx]1;docker00a4697cdfe7ad7d6f4d609940f76aa0080d24c98c4940009eb75e9e9614eca0
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hsudo docker run -d nginx[?1l>[?2004l
+]2;sudo docker run -d nginx]1;dockerb10e382768a4de972bb9aa372c78590fd401116bfaa20b03afc678fc5f5ffe58
+^[[A[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hsudo docker run -d nginx[?1l>[?2004l
+]2;sudo docker run -d nginx]1;dockerf244d6aae5813cca069c5374d732b1b8087cdced18594ef330b173d3a99d3795
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker ps -a[?1l>[?2004l
+]2;sudo docker ps -a]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+f244d6aae581   nginx     "/docker-entrypoint.…"   6 seconds ago   Up 5 seconds   80/tcp    adoring_tharp
+b10e382768a4   nginx     "/docker-entrypoint.…"   7 seconds ago   Up 6 seconds   80/tcp    stoic_saha
+00a4697cdfe7   nginx     "/docker-entrypoint.…"   9 seconds ago   Up 8 seconds   80/tcp    vigilant_leakey
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker stop f2[?1l>[?2004l
+]2;sudo docker stop f2]1;dockerf2
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hsudo docker stop f2  b1[?1l>[?2004l
+]2;sudo docker stop b1]1;dockerb1
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker ps -a[?1l>[?2004l
+]2;sudo docker ps -a]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                     PORTS     NAMES
+f244d6aae581   nginx     "/docker-entrypoint.…"   19 seconds ago   Exited (0) 6 seconds ago             adoring_tharp
+b10e382768a4   nginx     "/docker-entrypoint.…"   20 seconds ago   Exited (0) 3 seconds ago             stoic_saha
+00a4697cdfe7   nginx     "/docker-entrypoint.…"   22 seconds ago   Up 20 seconds              80/tcp    vigilant_leakey
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2022-03-13 18:07:30+0100

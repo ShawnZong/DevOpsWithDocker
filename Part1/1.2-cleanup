@@ -1,0 +1,51 @@
+Script started on 2022-03-13 18:08:40+0100
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker ps -a[?1l>[?2004l
+]2;sudo docker ps -a]1;docker[sudo] password for tanj: 
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                          PORTS     NAMES
+f244d6aae581   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) About a minute ago             adoring_tharp
+b10e382768a4   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) About a minute ago             stoic_saha
+00a4697cdfe7   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute               80/tcp    vigilant_leakey
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker images[?1l>[?2004l
+]2;sudo docker images]1;dockerREPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    c919045c4c2b   12 days ago   142MB
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker stop $()s)u)d)o) )d)o)c)k)e)r) )) ) ) ) ) ) ) ) ) ) ) ) d)o)c)k)e)r) )p)s) )-)a)) q)[?1l>[?2004l
+]2;sudo docker stop $(docker ps -q)]1;dockerGot permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json": dial unix /var/run/docker.sock: connect: permission denied
+"docker stop" requires at least 1 argument.
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;31m➜  [36mstudy[00m [K[?1h=[?2004hsudo docker stop $(docker ps -q)sdocker ps -q)[13Dudocker ps -q)[13D[1Cdocker ps -q)[13Dodocker ps -q)[13D docker ps -q)[13D[?1l>[?2004l
+]2;sudo docker stop $(sudo docker ps -q)]1;docker00a4697cdfe7
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker ps -a[?1l>[?2004l
+]2;sudo docker ps -a]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES
+f244d6aae581   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 2 minutes ago             adoring_tharp
+b10e382768a4   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 2 minutes ago             stoic_saha
+00a4697cdfe7   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 5 seconds ago             vigilant_leakey
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker container prune[?1l>[?2004l
+]2;sudo docker container prune]1;dockerWARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+f244d6aae5813cca069c5374d732b1b8087cdced18594ef330b173d3a99d3795
+b10e382768a4de972bb9aa372c78590fd401116bfaa20b03afc678fc5f5ffe58
+00a4697cdfe7ad7d6f4d609940f76aa0080d24c98c4940009eb75e9e9614eca0
+
+Total reclaimed space: 3.279kB
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hsudo docker container prune[15Dps -a          [10D[?1l>[?2004l
+]2;sudo docker ps -a]1;dockerCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo docker rmi nginx[?1l>[?2004l
+]2;sudo docker rmi nginx]1;dockerUntagged: nginx:latest
+Untagged: nginx@sha256:1c13bc6de5dfca749c377974146ac05256791ca2fe1979fc8e8278bf0121d285
+Deleted: sha256:c919045c4c2b0b0007c606e763ed2c830c7b1d038ce878a3c0d6f5b81e6ab80b
+Deleted: sha256:397dbc5767fa9031bfbe1523c4f0de80ad7ce8103b8cc2b58e6f36554c7f93eb
+Deleted: sha256:347cfffd04bb8392ba1999a911a3d9b5c2327a8b516a943d17965b41c88e1216
+Deleted: sha256:1b611a5b7c5d88f05e9eedeec09ba67bb81821a18dd21c6a0644a2e5017ac524
+Deleted: sha256:78dd14d2a308dfd875fc3baae9b8b2e1a15c7fbee828cdbdd8e55b18c64c6128
+Deleted: sha256:f5d1b591ffdcdfd05874cf66cb351506c6ef683cb58d2883bde24819b5a4f37d
+Deleted: sha256:1401df2b50d5de5a743b7bac3238ef3b7ce905ae39f54707b0ebb8eda3ab10bc
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004hssudo dcoker     ocker images[?1l>[?2004l
+]2;sudo docker images]1;dockerREPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+[1m[7m%[27m[1m[0m                                                                                                                                               ]2;tanj@tanj:~/study]1;~/study[0m[27m[24m[J[01;32m➜  [36mstudy[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2022-03-13 18:10:50+0100
