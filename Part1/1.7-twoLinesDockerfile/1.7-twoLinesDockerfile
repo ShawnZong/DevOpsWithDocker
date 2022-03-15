@@ -1,0 +1,24 @@
+Script started on 2022-03-15 17:00:27+0100
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1/1.7-twoLinesDockerfile]1;..nesDockerfile[0m[27m[24m[J[01;32m➜  [36m1.7-twoLinesDockerfile[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hscript 1.7-twoLinesDockerfile[29Drm[4P[23C    [25Dvim [11P[10C           [11D[14Dexit          [10Dsudo docker build . -t web-server[?1l>[?2004l
+]2;sudo docker build . -t web-server]1;docker[sudo] password for tanj: 
+Sending build context to Docker daemon   2.56kB
+Step 1/2 : FROM devopsdockeruh/simple-web-service:alpine
+ ---> fd312adc88e0
+Step 2/2 : CMD server
+ ---> Running in 4fd758df0ad6
+Removing intermediate container 4fd758df0ad6
+ ---> feab14f9b6a7
+Successfully built feab14f9b6a7
+Successfully tagged web-server:latest
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1/1.7-twoLinesDockerfile]1;..nesDockerfile[0m[27m[24m[J[01;32m➜  [36m1.7-twoLinesDockerfile[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hssudo docker run web-server[?1l>[?2004l
+]2;sudo docker run web-server]1;docker[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1/1.7-twoLinesDockerfile]1;..nesDockerfile[0m[27m[24m[J[01;31m➜  [36m1.7-twoLinesDockerfile[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2022-03-15 17:00:57+0100
