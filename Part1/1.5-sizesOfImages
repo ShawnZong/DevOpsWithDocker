@@ -1,0 +1,51 @@
+Script started on 2022-03-15 16:23:05+0100
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;32m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hssudo docker run -r d [7mdevopsdockeruh/simple-web-service:ubuntu[27m[40D[27md[27me[27mv[27mo[27mp[27ms[27md[27mo[27mc[27mk[27me[27mr[27mu[27mh[27m/[27ms[27mi[27mm[27mp[27ml[27me[27m-[27mw[27me[27mb[27m-[27ms[27me[27mr[27mv[27mi[27mc[27me[27m:[27mu[27mb[27mu[27mn[27mt[27mu[?1l>[?2004l
+]2;sudo docker run -d devopsdockeruh/simple-web-service:ubuntu]1;docker[sudo] password for tanj: 
+049fb1c63b6bd7c349f5d5284b0b0b7b046711cdc177452d79ac09eb308512ca
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;32m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hssudo docker exec -it 049 bash[?1l>[?2004l
+]2;sudo docker exec -it 049 bash]1;docker]0;root@049fb1c63b6b: /usr/src/approot@049fb1c63b6b:/usr/src/app# cat     tail -f m 
+server    text.log  
+]0;root@049fb1c63b6b: /usr/src/approot@049fb1c63b6b:/usr/src/app# tail -f text.log 
+2022-03-15 15:23:36 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-15 15:23:38 +0000 UTC
+2022-03-15 15:23:40 +0000 UTC
+2022-03-15 15:23:42 +0000 UTC
+2022-03-15 15:23:44 +0000 UTC
+2022-03-15 15:23:46 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-15 15:23:48 +0000 UTC
+2022-03-15 15:23:50 +0000 UTC
+2022-03-15 15:23:52 +0000 UTC
+2022-03-15 15:23:54 +0000 UTC
+2022-03-15 15:23:56 +0000 UTC
+^C
+]0;root@049fb1c63b6b: /usr/src/approot@049fb1c63b6b:/usr/src/app# exit
+exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;31m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hssudo docker run -0d   d [7mdevopsdockeruh/simple-web-service:alpine[27m[40D[27md[27me[27mv[27mo[27mp[27ms[27md[27mo[27mc[27mk[27me[27mr[27mu[27mh[27m/[27ms[27mi[27mm[27mp[27ml[27me[27m-[27mw[27me[27mb[27m-[27ms[27me[27mr[27mv[27mi[27mc[27me[27m:[27ma[27ml[27mp[27mi[27mn[27me[?1l>[?2004l
+]2;sudo docker run -d devopsdockeruh/simple-web-service:alpine]1;dockerUnable to find image 'devopsdockeruh/simple-web-service:alpine' locally
+alpine: Pulling from devopsdockeruh/simple-web-service
+
+[1A[2Kba3557a56b15: Pulling fs layer [1B
+[1A[2K1dace236434b: Pulling fs layer [1B
+[1A[2K4f4fb700ef54: Pulling fs layer [1B[2A[2K1dace236434b: Downloading [>                                                  ]  51.93kB/5.117MB[2B[2A[2K1dace236434b: Downloading [========================>                          ]  2.554MB/5.117MB[2B[3A[2Kba3557a56b15: Downloading [>                                                  ]  28.75kB/2.812MB[3B[2A[2K1dace236434b: Downloading [=================================>                 ]  3.459MB/5.117MB[2B[1A[2K4f4fb700ef54: Downloading [==================================================>]      32B/32B[1B[1A[2K4f4fb700ef54: Verifying Checksum [1B[1A[2K4f4fb700ef54: Download complete [1B[2A[2K1dace236434b: Verifying Checksum [2B[2A[2K1dace236434b: Download complete [2B[3A[2Kba3557a56b15: Downloading [=====>                                             ]  311.3kB/2.812MB[3B[3A[2Kba3557a56b15: Downloading [============================>                      ]  1.592MB/2.812MB[3B[3A[2Kba3557a56b15: Verifying Checksum [3B[3A[2Kba3557a56b15: Download complete [3B[3A[2Kba3557a56b15: Extracting [>                                                  ]  32.77kB/2.812MB[3B[3A[2Kba3557a56b15: Extracting [============>                                      ]  720.9kB/2.812MB[3B[3A[2Kba3557a56b15: Extracting [==================================================>]  2.812MB/2.812MB[3B[3A[2Kba3557a56b15: Pull complete [3B[2A[2K1dace236434b: Extracting [>                                                  ]  65.54kB/5.117MB[2B[2A[2K1dace236434b: Extracting [==========>                                        ]  1.114MB/5.117MB[2B[2A[2K1dace236434b: Extracting [===================================>               ]   3.67MB/5.117MB[2B[2A[2K1dace236434b: Extracting [==================================================>]  5.117MB/5.117MB[2B[2A[2K1dace236434b: Pull complete [2B[1A[2K4f4fb700ef54: Extracting [==================================================>]      32B/32B[1B[1A[2K4f4fb700ef54: Extracting [==================================================>]      32B/32B[1B[1A[2K4f4fb700ef54: Pull complete [1BDigest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+b6608d3299e19e8148653386738d3d56fd59d8a6773a11daa3b8884d3d7e0060
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;32m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hssudo docker exec -it b66 sh[?1l>[?2004l
+]2;sudo docker exec -it b66 sh]1;docker/usr/src/app # [6n/usr/src/app # [Jtail -f t/usr/src/app # tail -f text.log [J
+2022-03-15 15:24:36 +0000 UTC
+2022-03-15 15:24:38 +0000 UTC
+2022-03-15 15:24:40 +0000 UTC
+2022-03-15 15:24:42 +0000 UTC
+2022-03-15 15:24:44 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-15 15:24:46 +0000 UTC
+2022-03-15 15:24:48 +0000 UTC
+2022-03-15 15:24:50 +0000 UTC
+2022-03-15 15:24:52 +0000 UTC
+2022-03-15 15:24:54 +0000 UTC
+^C
+/usr/src/app # [6nexit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;31m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2022-03-15 16:24:59+0100
