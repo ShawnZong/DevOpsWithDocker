@@ -1,0 +1,8 @@
+Script started on 2022-03-16 12:24:45+0100
+[1m[7m%[27m[1m[0m                                                                                                                                          ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;32m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hssudo docker run -d -p 127.0.0.1:8080:8080 simple-web-service[?1l>[?2004l
+]2;sudo docker run -d -p 127.0.0.1:8080:8080 simple-web-service]1;docker[sudo] password for tanj: 
+093712579a122e7e4e92d0935ef7abb2120214f811b6d508dce30978cacfc0ae
+[1m[7m%[27m[1m[0m                                                                                                                                          ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;32m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hccurl localhost:8080[?1l>[?2004l
+]2;curl localhost:8080]1;curl{"message":"You connected to the following path: /","path":"/"}[1m[7m%[27m[1m[0m                                                                                                                                          ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;32m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2022-03-16 12:25:25+0100
