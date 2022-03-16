@@ -1,0 +1,14 @@
+Script started on 2022-03-16 11:56:24+0100
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;32m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hscript 1.9-volumes[18Dls                [16Dvim text.log[12Dls          [10Dvim text.log[12Drm 1.9-volumes[14Dls            [12Dclearsudo docker container prunes -a[22Drm -rf text.log       [20Dls                  [18Dsudo docker run -v $(pwd)/text.log:/usr/src/app/text.log devopsdockeruh/simple-web-service[?1l>[?2004l
+]2;sudo docker run -v $(pwd)/text.log:/usr/src/app/text.log ]1;docker[sudo] password for tanj: 
+Starting log output
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+^C[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;31m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hllsl  ccat text.log[1m [0m[0m [?1l>[?2004l
+]2;cat text.log]1;cat2022-03-16 10:56:38 +0000 UTC
+2022-03-16 10:56:40 +0000 UTC
+2022-03-16 10:56:42 +0000 UTC
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1]1;..hDocker/Part1[0m[27m[24m[J[01;32m➜  [36mPart1[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2022-03-16 11:56:51+0100
