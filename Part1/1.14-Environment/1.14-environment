@@ -1,0 +1,63 @@
+Script started on 2022-03-19 13:18:37+0100
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1/1.14-Environment]1;..4-Environment[0m[27m[24m[J[01;32m➜  [36m1.14-Environment[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hscript 1.14-environment[23Drm 1.14-E[4P[10C    [19Dclear              [14Dsudo docker stop $(sudo docker ps -q)[37Dexit                                 [33Dsudo docker run -d -p 8080:8080 1.14-backend[32Dbuild . -t 1.14-frontend -f Dockerfile.frontend[?1l>[?2004l
+]2;sudo docker build . -t 1.14-frontend -f Dockerfile.frontend]1;docker[sudo] password for tanj: 
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  777.2kB
+Step 1/8 : FROM node:16-alpine
+ ---> 0e1547c0f4a4
+Step 2/8 : EXPOSE 5000
+ ---> Using cache
+ ---> 2b3ae3381a04
+Step 3/8 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 6714aecf6a87
+Step 4/8 : RUN npm install -g serve
+ ---> Using cache
+ ---> c38a8070ff28
+Step 5/8 : COPY example-frontend .
+ ---> Using cache
+ ---> 995be128a060
+Step 6/8 : RUN npm install
+ ---> Using cache
+ ---> fd6bbbc4d00a
+Step 7/8 : RUN REACT_APP_BACKEND_URL=http://localhost:8080 npm run build
+ ---> Using cache
+ ---> 26a3d25d5d4d
+Step 8/8 : CMD ["serve","-s","-l","5000","build"]
+ ---> Using cache
+ ---> eb136bbc318c
+Successfully built eb136bbc318c
+Successfully tagged 1.14-frontend:latest
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1/1.14-Environment]1;..4-Environment[0m[27m[24m[J[01;32m➜  [36m1.14-Environment[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hsudo docker build . -t 1.14-frontend -f Dockerfile.frontend[59Dscript 1.14-environment                                    [36D[23Drm 1.14-E[4P[10C    [19Dclear              [14Dsudo docker stop $(sudo docker ps -q)[37Dexit                                 [33Dsudo docker run -d -p 8080:8080 1.14-backend[32Dbuild . -t 1.14-frontend -f Dockerfile.frontend[59Dscript 1.14-Environment                                    [36D[23Dls                     [21Dclearsudo docker container prune[15Dstop $(sudo docker ps -q)[25Drun -d -p 5000:5000 1.14-frontend[23D808[2C808[7Cbackend [32Dbuild . -t 1.14-frontend -f Dockerfile.frontend[31Dback[P[18Cbackend  [?1l>[?2004l
+]2;sudo docker build . -t 1.14-backend -f Dockerfile.backend]1;dockerSending build context to Docker daemon  557.1kBSending build context to Docker daemon  777.2kB
+Step 1/8 : FROM golang:1.16
+ ---> 972d8c0bc0fc
+Step 2/8 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 375194975482
+Step 3/8 : COPY ./example-backend .
+ ---> Using cache
+ ---> 175bef7ae479
+Step 4/8 : RUN go build
+ ---> Using cache
+ ---> 262af1368e56
+Step 5/8 : ENV PORT=8080
+ ---> Using cache
+ ---> 962865d8fe2b
+Step 6/8 : ENV REQUEST_ORIGIN=http://localhost:5000
+ ---> Using cache
+ ---> efbbfc669cc6
+Step 7/8 : EXPOSE 8080
+ ---> Using cache
+ ---> cab02808d69c
+Step 8/8 : CMD ["./server"]
+ ---> Using cache
+ ---> 706d58ead46a
+Successfully built 706d58ead46a
+Successfully tagged 1.14-backend:latest
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1/1.14-Environment]1;..4-Environment[0m[27m[24m[J[01;32m➜  [36m1.14-Environment[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hsudo docker build . -t 1.14-backend -f Dockerfile.backend[29Dfrontend -f Dockerfile.frontend[59Dscript 1.14-environment                                    [36D[23Dsudo docker build . -t 1.14-frontend -f Dockerfile.frontend[31Dback[P[18Cbackend  [57D                                                         [57Dsudo docker build . -t 1.14-backend -f Dockerfile.backend[29Dfrontend -f Dockerfile.frontend[59Dscript 1.14-environment                                    [36D[23Drm 1.14-E[4P[10C    [19Dclear              [14Dsudo docker stop $(sudo docker ps -q)[37Dexit                                 [33Dsudo docker run -d -p 8080:8080 1.14-backend[?1l>[?2004l
+]2;sudo docker run -d -p 8080:8080 1.14-backend]1;docker4bb61e678f81a2e270fcac228364500c0dffe3e0fe55792226d2dbf8fd1a5eaa
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1/1.14-Environment]1;..4-Environment[0m[27m[24m[J[01;32m➜  [36m1.14-Environment[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hsudo docker run -d -p 8080:8080 1.14-backend[32Dbuild . -t[9P[13C -f Dockerfile.backend[29Dfrontend -f Dockerfile.frontend[59Dscript 1.14-environment                                    [36D[23Drm 1.14-E[4P[10C    [19Dclear              [14Dsudo docker stop $(sudo docker ps -q)[37Dexit                                 [33Dsudo docker run -d -p 8080:8080 1.14-backend[32Dbuild . -t 1.14-frontend -f Dockerfile.frontend[59Dscript 1.14-Environment                                    [36D[23Dls                     [21Dclearsudo docker container prune[15Dstop $(sudo docker ps -q)[25Drun -d -p 5000:5000 1.14-frontend[?1l>[?2004l
+]2;sudo docker run -d -p 5000:5000 1.14-frontend]1;docker1dc06ee79e05e121d0008366e71ca119c710b57a1825aa6c6c5cc0055f2abb49
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]2;tanj@tanj:~/study/devopsWithDocker/Part1/1.14-Environment]1;..4-Environment[0m[27m[24m[J[01;32m➜  [36m1.14-Environment[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2022-03-19 13:19:20+0100
