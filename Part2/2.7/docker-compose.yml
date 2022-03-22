@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+        training:
+                image: 2.7-training
+                build: ./training
+                volumes:
+                        - model:/src/model
+                        - ./imgs:/src/imgs
+        frontend:
+                image: 2.7-frontend
+                build: ./frontend
+                ports:
+                        - 3000:3000
+                depends_on:
+                        - backend
+        backend:
+                image: 2.7-backend
+                build: ./backend
+                ports:
+                        - 5000:5000
+                volumes:
+                        - model:/src/model
+                depends_on:
+                        - training
+volumes:
+        model:
