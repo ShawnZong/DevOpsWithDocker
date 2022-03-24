@@ -1,0 +1,1 @@
+the size of frontend image is 121MB while backend is only 17.8MB
