@@ -1,0 +1,11 @@
+FROM node:16-alpine
+EXPOSE 5000
+WORKDIR /usr/src/app
+RUN npm install -g serve
+COPY example-frontend .
+RUN npm install
+RUN REACT_APP_BACKEND_URL=http://localhost:8080 npm run build
+RUN chmod a+x /usr/src/app/build
+RUN adduser -D appuser
+USER appuser
+CMD ["serve","-s","-l","5000","build"]
