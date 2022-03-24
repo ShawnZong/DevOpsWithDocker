@@ -4,9 +4,7 @@ COPY example-frontend .
 RUN npm install && \
     REACT_APP_BACKEND_URL=http://localhost:8080 npm run build
 
-FROM node:16-alpine
-WORKDIR /usr/src/app
-COPY --from=build-stage /usr/src/app/build /usr/src/app/build
-RUN npm install -g serve
+FROM lipanski/docker-static-website:latest
+COPY --from=build-stage /usr/src/app/build /home/static/build
 EXPOSE 5000
-CMD ["serve","-s","-l","5000","build"]
+CMD ["/thttpd", "-D", "-h", "0.0.0.0", "-p", "5000", "-d", "/home/static/build", "-u", "static", "-l", "-", "-M", "60"]
