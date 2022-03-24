@@ -1,0 +1,15 @@
+FROM node:16-alpine as build-stage
+WORKDIR /usr/src/app
+COPY example-frontend .
+RUN npm install && \
+    REACT_APP_BACKEND_URL=http://localhost:8080 npm run build
+
+FROM node:16-alpine
+WORKDIR /usr/src/app
+COPY --from=build-stage /usr/src/app/build /usr/src/app/build
+RUN npm install -g serve &&\
+    chmod a+x /usr/src/app/build && \
+    adduser userapp
+USER userapp
+EXPOSE 5000
+CMD ["serve","-s","-l","5000","build"]

@@ -1,0 +1,12 @@
+FROM golang:1-alpine as build-stage
+WORKDIR /usr/src/app
+COPY ./example-backend .
+RUN go build
+
+FROM scratch
+WORKDIR /usr/src/app
+ENV PORT=8080
+ENV REQUEST_ORIGIN=http://localhost
+EXPOSE 8080
+COPY --from=build-stage /usr/src/app/server /usr/src/app/server
+CMD ["./server"]
