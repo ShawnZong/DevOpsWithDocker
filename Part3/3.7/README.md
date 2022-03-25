@@ -10,18 +10,15 @@ RUN npm run build
 EXPOSE 3000
 CMD ["serve","-s","-l","3000","build"]
 ```
-# Optimized Dockerfile, image size: 120MB
+# Optimized Dockerfile, image size: 680KB
 ```dockerfile
 FROM node:16-alpine as build-stage
 WORKDIR /usr/src/app
 COPY . .
 RUN npm install && npm run build
 
-FROM node:16-alpine
-WORKDIR /usr/src/app
-COPY --from=build-stage /usr/src/app/build /usr/src/app/build
-RUN npm install -g serve && adduser -D appuser
-USER appuser
+FROM lipanski/docker-static-website:latest
+COPY --from=build-stage /usr/src/app/build /home/static/build
 EXPOSE 3000
-CMD ["serve","-s","-l","3000","build"]
+CMD ["/thttpd", "-D", "-h", "0.0.0.0", "-p", "3000", "-d", "/home/static/build", "-u", "static", "-l", "-", "-M", "60"]
 ```
